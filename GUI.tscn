@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://PointController.gd" type="Script" id=1]
+[ext_resource path="res://VBoxContainer.gd" type="Script" id=2]
+[ext_resource path="res://Brown.png" type="Texture" id=3]
+[ext_resource path="res://MenuButton.gd" type="Script" id=4]
+[ext_resource path="res://Button2.gd" type="Script" id=5]
+
+[node name="World" type="Node" index="0"]
+
+[node name="PointController" type="Node" parent="." index="0"]
+
+script = ExtResource( 1 )
+
+[node name="UI Container" type="MarginContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 70.0
+margin_right = 690.0
+margin_bottom = 430.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Kanji Container" type="VBoxContainer" parent="UI Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -20.0
+margin_top = 10.0
+margin_right = 580.0
+margin_bottom = 440.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+script = ExtResource( 2 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="KanjiBackground" type="Sprite" parent="UI Container/Kanji Container" index="0"]
+
+position = Vector2( 132, 116.641 )
+scale = Vector2( 2.22078, 1.71756 )
+texture = ExtResource( 3 )
+
+[node name="Button1" type="Button" parent="UI Container/Kanji Container/KanjiBackground" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = -56.0
+margin_right = 152.0
+margin_bottom = -36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Click me"
+flat = false
+align = 1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Button2" type="Button" parent="UI Container/Kanji Container/KanjiBackground" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 43.0
+margin_right = 152.0
+margin_bottom = 63.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Click me"
+flat = false
+align = 1
+script = ExtResource( 5 )
+_sections_unfolded = [ "Rect" ]
+
+
